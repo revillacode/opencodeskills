@@ -22,7 +22,8 @@ packaged Omarchy files.
   `gaps_out` at `10px` on all sides so application windows retain a `10px`
   top gap below the bar's reserved area.
 - The Raspberry and Centauri panels are user plugins. Their popup cards use a
-  `10px` outer margin, a `22px` vertical offset for this topbar geometry, and
+  `30px` topbar anchor height, a `10px` outer margin, a `22px` vertical offset
+  for this topbar geometry, and
   the theme's `Color.bar.active` border color. Notifications are restricted to
   `DP-1`, placed at the bottom-right with `10px` right and bottom margins, and
   use the same border color.
@@ -79,6 +80,9 @@ user-owned files:
   `screen.name === "DP-1"` and anchor its column to the bottom-right.
 - Use `omarchy-restart-shell` after QML changes and `pkill -x waybar` followed
   by a normal Waybar restart after Waybar changes.
+- Keep the active bar selection in user-owned `shell.json`; use the persistent
+  `bar-off` toggle when Waybar is the visible bar so Omarchy's hidden helper
+  bar does not replace it after a reboot.
 
 Useful read-only Raspberry Pi data includes hostname, OS, uptime, temperature,
 load, CPU count, memory, root disk usage, active Docker count, and each active
