@@ -1,0 +1,11 @@
+{
+  "name": "@revilla/opencode-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Curated reusable skills for OpenCode",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/validate-skills.mjs"
+  }
+}
