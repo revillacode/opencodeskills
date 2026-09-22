@@ -1,16 +1,14 @@
-# OpenCode Skills
+# Omarchy Topbar Skill
 
-Curated, reusable skills for [OpenCode](https://opencode.ai). Each skill is
-self-contained, trigger-focused, and designed to be loaded from a local clone
-or a shared skills directory.
+An OpenCode skill for building and maintaining professional Omarchy topbar
+customizations. It is focused on Quickshell widgets, user plugins, icons,
+popups, remote status modules, and safe visual validation.
 
-## Included Skills
+## Included Skill
 
 | Skill | Purpose |
 | --- | --- |
-| `github-project` | Plan, implement, validate, and publish professional GitHub repositories. |
-| `linux-desktop` | Safely customize Linux desktop environments, especially Hyprland and Omarchy. |
-| `diagnose-crash` | Investigate Linux crashes from core dumps and produce actionable reports. |
+| `omarchy-topbar` | Create, customize, debug, and validate Omarchy topbar widgets and panels. |
 
 ## Install
 
@@ -35,8 +33,8 @@ OpenCode after changing skill configuration or skill files.
 npm test
 ```
 
-The validator checks directory names, required frontmatter, descriptions, and
-the expected `SKILL.md` layout.
+The validator checks the skill directory name, required frontmatter,
+description, and expected `SKILL.md` layout.
 
 ## Contributing
 

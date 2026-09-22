@@ -2,9 +2,9 @@
 
 ## Skill Design
 
-- Give each skill one clear responsibility.
+- Keep changes focused on the Omarchy topbar skill.
 - Use a lowercase, hyphen-separated directory name.
-- Put the skill instructions in `SKILL.md`.
+- Put the instructions in `skills/omarchy-topbar/SKILL.md`.
 - Start frontmatter descriptions with concrete trigger terms.
 - State safety boundaries and verification steps explicitly.
 - Prefer commands and examples that work on a clean Linux system.
@@ -19,5 +19,5 @@
 
 ## Review Standard
 
-Reviewers check that the skill is narrowly scoped, operationally safe,
+Reviewers check that topbar guidance is narrowly scoped, operationally safe,
 discoverable by its description, and useful without hidden context.
