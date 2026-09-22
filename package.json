@@ -1,8 +1,8 @@
 {
-  "name": "@revilla/omarchy-topbar-skill",
+  "name": "@revilla/opencode-skills",
   "version": "0.1.0",
   "private": true,
-  "description": "OpenCode skill for professional Omarchy topbar customization",
+  "description": "Curated reusable skills for OpenCode",
   "license": "MIT",
   "type": "module",
   "scripts": {

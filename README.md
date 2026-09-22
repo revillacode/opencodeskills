@@ -1,14 +1,17 @@
-# Omarchy Topbar Skill
+# OpenCode Skills
 
-An OpenCode skill for building and maintaining professional Omarchy topbar
-customizations. It is focused on Quickshell widgets, user plugins, icons,
-popups, remote status modules, and safe visual validation.
+A curated, extensible collection of reusable skills for
+[OpenCode](https://opencode.ai). Each skill is isolated in its own directory so
+new capabilities can be added without changing existing skills.
 
-## Included Skill
+## Included Skills
 
 | Skill | Purpose |
 | --- | --- |
 | `omarchy-topbar` | Create, customize, debug, and validate Omarchy topbar widgets and panels. |
+
+Add future skills under `skills/<skill-name>/SKILL.md`. The directory name must
+be lowercase kebab-case and match the `name` field in the skill frontmatter.
 
 ## Install
 
@@ -19,7 +22,7 @@ configuration:
 {
   "$schema": "https://opencode.ai/config.json",
   "skills": {
-    "paths": ["/absolute/path/to/opencode-skills/skills"]
+    "paths": ["/absolute/path/to/opencodeskills/skills"]
   }
 }
 ```
@@ -39,7 +42,7 @@ description, and expected `SKILL.md` layout.
 ## Contributing
 
 New skills should have a narrow purpose, explicit trigger language, safe
-defaults, and verification guidance. See [CONTRIBUTING.md](CONTRIBUTING.md).
+defaults, and verification guidance.
 
 ## License
 
