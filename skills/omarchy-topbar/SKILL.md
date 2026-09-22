@@ -17,6 +17,17 @@ packaged Omarchy files.
 - A third-party bar plugin needs a `manifest.json` with `kinds: ["bar-widget"]`
   and an `entryPoints.barWidget` QML entry point.
 - A panel widget can extend `Panel` and use `KeyboardPanel` for a popup.
+- The current reference layout uses Waybar only on `DP-1`, with `margin-top: 14`,
+  `margin-bottom: 4`, and `10px` horizontal margins. Keep Hyprland's window
+  `gaps_out` at `10px` on all sides so application windows retain a `10px`
+  top gap below the bar's reserved area.
+- The Raspberry and Centauri panels are user plugins. Their popup cards use a
+  `10px` outer margin, a `22px` vertical offset for this topbar geometry, and
+  the theme's `Color.bar.active` border color. Notifications are restricted to
+  `DP-1`, placed at the bottom-right with `10px` right and bottom margins, and
+  use the same border color.
+- The reference right-side order is printer, Raspberry, memory, and CPU. The
+  printer popup is narrower (`440px`) than the Raspberry popup (`560px`).
 - Simple custom modules can use `type: "command"` or `type: "qml"` in the
   bar layout, but use a plugin for interactive panels and persistent logic.
 - Never edit `/usr/share/omarchy` or the packaged shell under `$OMARCHY_PATH`.
@@ -54,6 +65,20 @@ For SSH-backed modules:
 - Sanitize container names, image names, and status strings before displaying
   them in QML.
 - Handle unreachable hosts without blocking or crashing the shell.
+
+## Reference DP-1 Layout
+
+For a single-primary-monitor setup, keep the output-specific behavior in
+user-owned files:
+
+- Waybar config: `output: ["DP-1"]`, top margin `14`, bottom margin `4`, and
+  left/right margins `10`.
+- The cloned bar plugin should instantiate its bar variants only for
+  `screen.name === "DP-1"`.
+- The cloned notifications plugin should instantiate popup variants only for
+  `screen.name === "DP-1"` and anchor its column to the bottom-right.
+- Use `omarchy-restart-shell` after QML changes and `pkill -x waybar` followed
+  by a normal Waybar restart after Waybar changes.
 
 Useful read-only Raspberry Pi data includes hostname, OS, uptime, temperature,
 load, CPU count, memory, root disk usage, active Docker count, and each active
